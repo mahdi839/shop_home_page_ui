@@ -46,7 +46,7 @@
 
     <!-- ========== SLOT 1: BEEF & CHICKEN ========== -->
     <div class="mb-5">
-        <div class="flex justify-start">
+        <div id="beef-text-div" class="flex justify-start">
             <div class="relative inline-flex flex-col items-start ps-1 pr-6 pt-4 pb-3">
                 <h2 class="text-xl font-extrabold text-gray-900 tracking-tight leading-tight" style="font-family: Georgia, serif;">Beef & Chicken</h2>
                 <div class="flex gap-2">
@@ -58,10 +58,10 @@
         </div>
 
         <!-- CHANGED: grid-cols-2 on mobile (was grid-cols-1) -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4 mt-5 px-1 sm:px-2">
+        <div  class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4 mt-5 px-1 sm:px-2">
 
             <!-- Card 1 -->
-            <div class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
+            <div class="product-card relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
                 <div class="p-2 sm:p-3 bg-white border-0">
                     <div class="card-img relative rounded-md mb-2 group h-48 md:h-52 overflow-hidden">
                         <a href="/product/tomato" class="block h-full">
@@ -106,7 +106,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
+            <div class="product-card relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
                 <div class="p-2 sm:p-3 bg-white border-0">
                     <div class="card-img relative rounded-md mb-2 group h-48 md:h-52 overflow-hidden">
                         <a href="/product/potato" class="block h-full">
@@ -151,7 +151,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
+            <div id="product-card-three" class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
                 <div class="p-2 sm:p-3 bg-white border-0">
                     <div class="card-img relative rounded-md mb-2 group h-48 md:h-52 overflow-hidden">
                         <a href="/product/orange" class="block h-full">
@@ -196,7 +196,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
+            <div class="product-card relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
                 <div class="p-2 sm:p-3 bg-white border-0">
                     <div class="card-img relative rounded-md mb-2 group h-48 md:h-52 overflow-hidden">
                         <a href="/product/lemon" class="block h-full">
@@ -235,7 +235,7 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
+            <div class="product-card relative bg-white rounded-3 shadow-lg hover:shadow-2xl h-full flex flex-col">
                 <div class="p-2 sm:p-3 bg-white border-0">
                     <div class="card-img relative rounded-md mb-2 group h-48 md:h-52 overflow-hidden">
                         <a href="/product/onion" class="block h-full">
@@ -676,5 +676,8 @@
     <!-- ===== END MANGO BANNER ===== -->
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="index.js"></script>
 </body>
 </html>

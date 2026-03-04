@@ -1,34 +1,54 @@
-gsap.from('#beef-text-div', {
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#beef-grid-div',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+    }
+})
+tl.from('#beef-text-div', {
     x: 500,
-    duration: 2
+    duration: 1
 })
 
-const cards = document.querySelectorAll(".product-card");
+    // product animation
+    .from(".beef-card", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.4
+    })
 
-cards.forEach((card, index) => {
+    .from('#hot-deals-header', {
+        opacity: 0,
+        y: 200,
+        duration: 1
+    })
 
-  if (index % 2 === 0) {
-    // even cards -> from left
-    gsap.from(card, {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      delay: index * 0.1
-    });
-  } else {
-    // odd cards -> from right
-    gsap.from(card, {
-      x: 200,
-      opacity: 0,
-      duration: 1,
-      delay: index * 0.1
-    });
-  }
+    .from('.hot-deals-cards', {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.4
+    })
 
+const snacksTimline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#snacks-main-div',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+    }
 });
+snacksTimline.from('#snacks-header', {
+    opacity: 0,
+    x: 200,
+    duration: 1,
 
-gsap.from('#product-card-three',{
-    opacity:0,
-    duration:1,
-    delay:1
+})
+
+snacksTimline.from('.snacks-cards', {
+    opacity: 0,
+    x: 200,
+    duration: 1,
+    stagger: 0.4,
 })
